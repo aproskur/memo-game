@@ -29,13 +29,6 @@ const Title = styled.div`
   } 
 `;
 
-const Button = styled.button`
-  margin-left: 10px;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-`;
-
 const StyledFlexContainer = styled.div`
 display: flex;
 gap: 1em;
@@ -56,6 +49,7 @@ padding: .5em 1.25em;
   `;
 
 const StyledSmallScreenMenuButton = styled(ToggleButton)`
+
   background-color: var(--accent-yellow);
 
 

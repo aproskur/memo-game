@@ -44,7 +44,7 @@ const StyledThemeSelector = styled.div`
     flex-direction: column;
     border-radius: 10px;
     width: 45%;
-    padding: 2em;
+    padding: 3em 3.5em;
     gap: 1em;
     
     
@@ -71,7 +71,7 @@ const StyledItemsWrapper = styled.div`
     gap: 1em;
 
     div {
-        color: var(--greyish-blue);
+        color: var(--hover);
     }
 
     & > * {
@@ -85,6 +85,7 @@ const StyledItemsWrapper = styled.div`
 
 
 const StyledYellowButton = styled(ToggleButton)`
+    font-family: "Atkinson Hyperlegible", sans-serif;
     background-color: var(--accent-yellow);
   
     &:hover {
@@ -112,11 +113,11 @@ const ThemeSelector = () => {
                     <div>Select Theme</div>
                 </StyledItemsWrapper>
                 <StyledItemsWrapper>
-                    <ToggleButton active={theme === 'Icons'} onClick={() => changeTheme('Icons')}>
-                        Icons
-                    </ToggleButton>
                     <ToggleButton active={theme === 'Numbers'} onClick={() => changeTheme('Numbers')}>
                         Numbers
+                    </ToggleButton>
+                    <ToggleButton active={theme === 'Icons'} onClick={() => changeTheme('Icons')}>
+                        Icons
                     </ToggleButton>
                 </StyledItemsWrapper>
                 <StyledItemsWrapper>
@@ -141,10 +142,10 @@ const ThemeSelector = () => {
                 </StyledItemsWrapper>
                 <StyledItemsWrapper>
                     <ToggleButton active={gridSize === 4} onClick={() => changeGridSize(4)}>
-                        4 x 4
+                        4x4
                     </ToggleButton>
                     <ToggleButton active={gridSize === 6} onClick={() => changeGridSize(6)}>
-                        6 x 6
+                        6x6
                     </ToggleButton>
                 </StyledItemsWrapper>
                 <StyledYellowButton onClick={() => startGame(true)}>
