@@ -7,9 +7,10 @@ import useWindowSize from '@/app/hooks/useWindowSize';
 
 const GameInfoContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 1em;
   height: 15%;
+  align-self: center;
 `;
 
 

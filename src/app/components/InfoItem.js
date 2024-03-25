@@ -9,6 +9,7 @@ const InfoItemContainer = styled.div`
   border-radius: 10px;
   padding:  1em 0.75em;
   position: relative; 
+  width: 200px;
 
   @media (max-width: 450px){
     flex-direction: column;
@@ -67,16 +68,13 @@ letter-spacing: 2px;
 `;
 
 const InfoItem = ({ label, value, highlight = false, currentPlayer = false }) => (
-
   <div>
     <InfoItemContainer $highlight={highlight}>
       <Label $highlight={highlight}>{label}</Label>
       <Value $highlight={highlight}>{value}</Value>
-      {currentPlayer && <CurrentPlayer></CurrentPlayer>}
     </InfoItemContainer>
     {currentPlayer && <CurrentPlayer>Current turn</CurrentPlayer>}
   </div>
-
 );
 
 export default InfoItem;

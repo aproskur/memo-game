@@ -14,10 +14,7 @@ const StyledMainContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1em;
-  
-  @media (max-widht: 375px){
-    background-color: red !important;
-  }
+
 `;
 
 const CenteredContainer = styled.div`

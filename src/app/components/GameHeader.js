@@ -9,6 +9,12 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;  
+  width: 70%;
+  align-self: center;
+
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.div`
@@ -143,7 +149,7 @@ const GameHeader = ({ onRestart, pauseTimer, resumeTimer }) => {
   return (
     <>
       <HeaderContainer>
-        <Title>memo</Title>
+        <Title>memory</Title>
         <StyledFlexContainer>
           <StyledSmallScreenMenuButton onClick={toggleMenu} className="menu-button">
             Menu

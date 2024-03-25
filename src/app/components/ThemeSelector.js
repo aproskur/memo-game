@@ -9,9 +9,20 @@ const StyledThemeSelectorWrapper = styled.div`
 display: flex;
 flex-direction: column;
 background-color: var(--dark);
-height: 100vh;
+padding: 2em 2em;
 justify-content: center;
 align-items: center;
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+margin: 0; 
+
+@media (max-width: 600px) { 
+    justify-content: flex-start;
+  }
+
 `
 
 const StyledMemoTitle = styled.div`
@@ -20,6 +31,11 @@ const StyledMemoTitle = styled.div`
     font-weight: bold;
     margin-bottom: 1em; 
     text-align: center;
+
+    @media(max-width: 940px) {
+        margin-top: 1em;
+    }
+   
 `;
 
 const StyledThemeSelector = styled.div`
@@ -27,16 +43,18 @@ const StyledThemeSelector = styled.div`
     background-color: #fff;
     flex-direction: column;
     border-radius: 10px;
-    width: 40%;
+    width: 45%;
     padding: 2em;
     gap: 1em;
     
+    
     @media(max-width: 1300px) {
-        width: 70%;
+        width: 60%;
     }
 
     @media(max-width: 940px) {
         width: 95%;
+        margin-top: 2em;
     }
 
     @media(max-width: 450px) {
@@ -88,7 +106,7 @@ const ThemeSelector = () => {
 
     return (
         <StyledThemeSelectorWrapper>
-            <StyledMemoTitle>memo</StyledMemoTitle>
+            <StyledMemoTitle>memory</StyledMemoTitle>
             <StyledThemeSelector>
                 <StyledItemsWrapper>
                     <div>Select Theme</div>
