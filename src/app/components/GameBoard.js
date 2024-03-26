@@ -10,11 +10,16 @@ import { faStar, faHeart, faAppleWhole, faPoo, faBath, faMoon, faHouse, faCar, f
 
 
 
+
 const StyledMainContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1em;
-
+  
+  @media (max-width: 900px){
+    justify-content: flex-start;
+    gap: 2.5em;
+}
 `;
 
 const CenteredContainer = styled.div`
@@ -23,6 +28,7 @@ const CenteredContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
   `;
 
 const BoardContainer = styled.div
@@ -30,8 +36,6 @@ const BoardContainer = styled.div
     display: grid;
     grid-template-columns: repeat(${(props) => props.columns}, 1fr);
     gap: 8px;
-    padding: 3em;
-    
     @media (max-width: 400px) {
         width: 98%;
         justify-content: center;
@@ -42,6 +46,7 @@ const BoardContainer = styled.div
 
 const CenteredBoardContainer = styled(BoardContainer)`
   max-width: 600px; 
+  
   @media (max-width: 400px) {
     width: 100%;
     justify-content: center;

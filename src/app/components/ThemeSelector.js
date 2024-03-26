@@ -19,7 +19,13 @@ left: 0;
 margin: 0; 
 
 @media (max-width: 500px){
-    height: 100vh;
+    justify-content: flex-start;
+    padding: 4em 1.5em;
+}
+
+@media (max-width: 350px){
+    justify-content: flex-start;
+    padding: 4em 0;
 }
 `
 
