@@ -9,7 +9,6 @@ const StyledThemeSelectorWrapper = styled.div`
 display: flex;
 flex-direction: column;
 background-color: var(--dark);
-padding: 2em 2em;
 justify-content: center;
 align-items: center;
 position: fixed;
@@ -19,23 +18,17 @@ bottom: 0;
 left: 0;
 margin: 0; 
 
-@media (max-width: 600px) { 
-    justify-content: flex-start;
-  }
-
+@media (max-width: 500px){
+    height: 100vh;
+}
 `
 
 const StyledMemoTitle = styled.div`
     font-size: 2em; 
     color: #fff;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 1em; 
     text-align: center;
-
-    @media(max-width: 940px) {
-        margin-top: 1em;
-    }
-   
 `;
 
 const StyledThemeSelector = styled.div`
@@ -43,18 +36,17 @@ const StyledThemeSelector = styled.div`
     background-color: #fff;
     flex-direction: column;
     border-radius: 10px;
-    width: 45%;
-    padding: 3em 3.5em;
+    padding: 2em;
     gap: 1em;
-    
-    
+    max-width: 550px;
+
+
     @media(max-width: 1300px) {
-        width: 60%;
+        width: 70%;
     }
 
     @media(max-width: 940px) {
         width: 95%;
-        margin-top: 2em;
     }
 
     @media(max-width: 450px) {
@@ -85,8 +77,9 @@ const StyledItemsWrapper = styled.div`
 
 
 const StyledYellowButton = styled(ToggleButton)`
-    font-family: "Atkinson Hyperlegible", sans-serif;
     background-color: var(--accent-yellow);
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    padding: .75em;
   
     &:hover {
         background-color: rgba(253, 162, 20, 0.8);
@@ -113,11 +106,11 @@ const ThemeSelector = () => {
                     <div>Select Theme</div>
                 </StyledItemsWrapper>
                 <StyledItemsWrapper>
-                    <ToggleButton active={theme === 'Numbers'} onClick={() => changeTheme('Numbers')}>
-                        Numbers
-                    </ToggleButton>
                     <ToggleButton active={theme === 'Icons'} onClick={() => changeTheme('Icons')}>
                         Icons
+                    </ToggleButton>
+                    <ToggleButton active={theme === 'Numbers'} onClick={() => changeTheme('Numbers')}>
+                        Numbers
                     </ToggleButton>
                 </StyledItemsWrapper>
                 <StyledItemsWrapper>
@@ -149,7 +142,7 @@ const ThemeSelector = () => {
                     </ToggleButton>
                 </StyledItemsWrapper>
                 <StyledYellowButton onClick={() => startGame(true)}>
-                    Start
+                    Start Game
                 </StyledYellowButton>
             </StyledThemeSelector>
         </StyledThemeSelectorWrapper>

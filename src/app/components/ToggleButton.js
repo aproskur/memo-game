@@ -3,21 +3,19 @@ import styled from 'styled-components';
 
 
 const StyledToggleButton = styled.button`
-font-family: "Atkinson Hyperlegible", sans-serif;
 background-color: ${(props) => (props.$active ? 'var(--dark)' : 'var(--idle)')};
+font-family: "Atkinson Hyperlegible", sans-serif;
 color: white;
 font-weight: 700;
 text-transform: capitalize;
 border: none;
 border-radius: 20px;
-padding: .5em 3em;
+padding: .5em 2em;
 font-size: 1em;
 cursor: pointer;
 transition: background-color 0.3s;
 flex-grow: 1;
 flex-shrink: 1;
-
-
 
   &:hover {
     background-color: ${(props) => (props.$active ? 'var(--hover)' : 'var(--idle)')};
