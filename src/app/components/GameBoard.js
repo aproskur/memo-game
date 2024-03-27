@@ -14,6 +14,7 @@ import { faStar, faHeart, faAppleWhole, faPoo, faBath, faMoon, faHouse, faCar, f
 const StyledMainContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 1em;
 
 
