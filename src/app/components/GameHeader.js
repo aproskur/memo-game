@@ -11,6 +11,7 @@ const HeaderContainer = styled.div`
   align-items: center;  
   width: 70%;
   align-self: center;
+  margin-bottom: 3em;
 
   @media (max-width: 450px) {
     width: 100%;

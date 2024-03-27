@@ -15,6 +15,8 @@ const StyledMainContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1em;
+
+
   
   @media (max-width: 900px){
     justify-content: flex-start;
@@ -36,6 +38,7 @@ const BoardContainer = styled.div
     display: grid;
     grid-template-columns: repeat(${(props) => props.columns}, 1fr);
     gap: 8px;
+    padding: 2em;
     @media (max-width: 400px) {
         width: 98%;
         justify-content: center;
